@@ -1,9 +1,9 @@
 {
-  "name": "lunch-menu-enlab",
+  "name": "motel-manager",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4230",
+    "start": "ng serve --port 4003",
     "live": "ng build --configuration=production",
     "build": "ng build --configuration=production --aot=false --build-optimizer false"
   },

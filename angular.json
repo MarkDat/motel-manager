@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LunchMenuEnlab": {
+    "MotelManager": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/LunchMenuEnlab",
+            "outputPath": "dist/MotelManager",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "LunchMenuEnlab:build:production"
+              "browserTarget": "MotelManager:build:production"
             },
             "development": {
-              "browserTarget": "LunchMenuEnlab:build:development"
+              "browserTarget": "MotelManager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LunchMenuEnlab:build"
+            "browserTarget": "MotelManager:build"
           }
         },
         "test": {
@@ -111,5 +111,5 @@
       }
     }
   },
-  "defaultProject": "LunchMenuEnlab"
+  "defaultProject": "MotelManager"
 }
