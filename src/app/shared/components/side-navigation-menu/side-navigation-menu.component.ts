@@ -110,4 +110,8 @@ export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy{
       this.selectedItem = itemNav?.path || '#';
     }
   }
+
+  onItemExpanded(e) {
+    this.openMenu.next(e);
+  }
 }

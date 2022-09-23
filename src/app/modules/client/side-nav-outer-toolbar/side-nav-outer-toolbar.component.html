@@ -1,9 +1,10 @@
-<!-- <app-header
+<app-header
+  *ngIf="isMobile"
   class="layout-header"
   [menuToggleEnabled]="true"
   (menuToggle)="menuOpened = !menuOpened;"
   [title]="title">
-</app-header> -->
+</app-header>
 
 <dx-drawer
   class="layout-body"

@@ -7,7 +7,7 @@ export class AppInfoService {
 	constructor() { }
 
 	public get title() {
-		return 'Shopee Food';
+		return 'Motel Manager';
 	}
 
 	public get currentYear() {

@@ -14,7 +14,9 @@
     expandEvent="click"
     (onItemClick)="onItemClick($event)"
     [width]="menuOpened ? '100%':'60px'"
-    (onContentReady)="onContentReady($event)">
+    (onContentReady)="onContentReady($event)"
+    (onItemExpanded)="onItemExpanded($event)"
+    [ngClass]="{'hide-toggle-item-visibility': !menuOpened}">
   </dx-tree-view>
   <div class="menu-container__footer">
     <app-user-panel [user]="user" [menuItems]="userMenuItems" menuMode="list"></app-user-panel>

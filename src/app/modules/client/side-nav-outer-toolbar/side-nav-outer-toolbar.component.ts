@@ -2,6 +2,7 @@ import { Component, HostListener, Input, OnInit, ViewChild } from '@angular/core
 import { NavigationEnd, Router } from '@angular/router';
 import { DxScrollViewComponent } from 'devextreme-angular';
 import { ScreenService } from '@app/services';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-side-nav-outer-toolbar',
@@ -22,8 +23,9 @@ export class SideNavOuterToolbarComponent implements OnInit {
   menuRevealMode = 'expand';
   minMenuSize = 0;
   shaderEnabled = false;
+  isMobile: boolean = false;
 
-  constructor(private screen: ScreenService, private router: Router) { }
+  constructor(private screen: ScreenService, private router: Router, private deviceDetectorService: DeviceDetectorService) { }
 
   ngOnInit() {
     this.menuOpened = this.screen.sizes['screen-large'];
@@ -48,6 +50,7 @@ export class SideNavOuterToolbarComponent implements OnInit {
     this.minMenuSize = isXSmall ? 0 : 60;
     this.shaderEnabled = !isLarge;
     this.menuOpened = isLarge;
+    this.isMobile = this.deviceDetectorService.isMobile();
   }
 
   get hideMenuAfterNavigation() {
@@ -70,21 +73,21 @@ export class SideNavOuterToolbarComponent implements OnInit {
         this.scrollView.instance.scrollTo(0);
       }
 
-      // if (this.hideMenuAfterNavigation) {
-      //   this.temporaryMenuOpened = false;
-      //   this.menuOpened = false;
-      //   pointerEvent.stopPropagation();
-      // }
+      if (this.hideMenuAfterNavigation) {
+        this.temporaryMenuOpened = false;
+        this.menuOpened = false;
+        pointerEvent.stopPropagation();
+      }
     } else {
       pointerEvent.preventDefault();
     }
   }
 
   navigationClick() {
-    // if (this.showMenuAfterClick) {
-    //   this.temporaryMenuOpened = true;
-    //   this.menuOpened = true;
-    // }
+    if (this.showMenuAfterClick) {
+      this.temporaryMenuOpened = true;
+      this.menuOpened = true;
+    }
   }
 
   @HostListener('window:resize', ['$event'])

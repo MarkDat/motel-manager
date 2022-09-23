@@ -8,6 +8,16 @@ export const navigation = [
     text: 'Thực Đơn',
     icon: 'fa fa-cutlery',
     path: '/food-menu/menu-info',
+    items: [
+      {
+        text: 'item1',
+        icon: 'fa fa-cutlery',
+      },
+      {
+        text: 'item1',
+        icon: 'fa fa-cutlery',
+      }
+    ]
   },
   {
     text: 'Cài đặt',

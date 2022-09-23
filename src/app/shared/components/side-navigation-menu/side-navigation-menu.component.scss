@@ -79,7 +79,7 @@
   
         &[aria-level='2'] .dx-treeview-item-content {
           font-weight: normal;
-          padding: 0 $side-panel-min-width;
+          padding: 0px 25px 0px 39px;
         }
       }
       // ##
@@ -111,5 +111,11 @@
       }
     }
     // ##
+
+    ::ng-deep .hide-toggle-item-visibility.dx-treeview {
+        .dx-treeview-toggle-item-visibility {
+          display: none;
+      }
+    }
   }
 }
