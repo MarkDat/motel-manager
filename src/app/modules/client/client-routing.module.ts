@@ -14,12 +14,6 @@ const routes: Routes = [
 				data: {},
 				canActivate: [AuthGuard],
 				loadChildren: () => import('@app/modules/dashboard/dasboard.module').then(m => m.DasboardModule)
-			},
-			{
-				path: 'food-menu',
-				data: {},
-				canActivate: [AuthGuard],
-				loadChildren: () => import('@app/modules/food-menu/food-menu.module').then(m => m.FoodMenuModule)
 			}
 		],
 	}

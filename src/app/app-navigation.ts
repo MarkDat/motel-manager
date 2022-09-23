@@ -1,26 +1,16 @@
 export const navigation = [
   {
-    text: 'Dashboard',
+    text: 'Thống kê',
     path: '/dashboard',
-    icon: 'fa fa-home',
+    icon: 'fa-solid fa-arrow-trend-up',
   },
   {
-    text: 'Thực Đơn',
-    icon: 'fa fa-cutlery',
-    path: '/food-menu/menu-info',
-    items: [
-      {
-        text: 'item1',
-        icon: 'fa fa-cutlery',
-      },
-      {
-        text: 'item1',
-        icon: 'fa fa-cutlery',
-      }
-    ]
+    text: 'Danh sách phòng',
+    icon: 'fa-solid fa-table-list',
+    path: ''
   },
   {
-    text: 'Cài đặt',
+    text: 'Cài đặt chung',
     icon: 'fa fa-cog',
     path: '',
   },

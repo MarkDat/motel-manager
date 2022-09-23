@@ -6,8 +6,6 @@
           onClick: toggleMenu
         }">
 		</dxi-item>
-		<dxi-item location="before" cssClass="header-title" *ngIf="title" [text]="title">
-		</dxi-item>
 		<dxi-item location="after">
 			<app-user-panel [user]="user" [menuItems]="userMenuItems" menuMode="list"></app-user-panel>
 		</dxi-item>

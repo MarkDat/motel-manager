@@ -15,6 +15,10 @@
     flex-direction: column;
     flex: 1;
 
+    .navigation {
+      padding-top: 2%;
+    }
+
     .menu-container__header {
       .logo-image {
         display: flex;

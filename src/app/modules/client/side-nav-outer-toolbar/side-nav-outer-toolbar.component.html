@@ -1,11 +1,3 @@
-<app-header
-  *ngIf="isMobile"
-  class="layout-header"
-  [menuToggleEnabled]="true"
-  (menuToggle)="menuOpened = !menuOpened;"
-  [title]="title">
-</app-header>
-
 <dx-drawer
   class="layout-body"
   position="before"
@@ -14,8 +6,8 @@
   [revealMode]="menuRevealMode"
   [minSize]="minMenuSize"
   [shading]="shaderEnabled"
-  [(opened)]="menuOpened">
-
+  [(opened)]="menuOpened"
+>
   <app-side-navigation-menu
     [menuOpened]="menuOpened"
     [compactMode]="!menuOpened"
@@ -23,10 +15,18 @@
     class="dx-swatch-additional"
     *dxTemplate="let dataMenu of 'panel'"
     (selectedItemChanged)="navigationChanged($event)"
-    (openMenu)="navigationClick()">
+    (openMenu)="navigationClick()"
+  >
   </app-side-navigation-menu>
 
   <dx-scroll-view class="with-footer">
+    <app-header
+      class="layout-header"
+      [menuToggleEnabled]="true"
+      (menuToggle)="menuOpened = !menuOpened"
+      [title]="title"
+    >
+    </app-header>
     <div class="content">
       <ng-content></ng-content>
     </div>
