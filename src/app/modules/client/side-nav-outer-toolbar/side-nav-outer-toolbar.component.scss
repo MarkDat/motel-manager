@@ -1,0 +1,25 @@
+:host {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.layout-header {
+  z-index: 1501;
+}
+
+.layout-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 5px 5px;
+  height: calc(100vh - 60px);
+}
+
+.content-footer {
+  height: 40px;
+}
