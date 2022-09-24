@@ -1,1 +1,36 @@
-<p>room-grid works!</p>
+<div class="room-grid">
+  <dx-data-grid
+	[dataSource]="[]"
+	[showColumnLines]="true"
+	[wordWrapEnabled]="true"
+	[noDataText]="'Chưa có phòng nào'"
+	[columnAutoWidth]="true"
+	[showBorders]="true"
+  >
+    <dxo-remote-operations [sorting]="true" [filtering]="true" [paging]="true">
+    </dxo-remote-operations>
+    <dxo-load-panel [enabled]="true"></dxo-load-panel>
+    <dxo-paging [pageSize]="pageSize"></dxo-paging>
+    <dxo-pager
+      [showNavigationButtons]="true"
+      [showPageSizeSelector]="true"
+      [allowedPageSizes]="allowPageSizes"
+    ></dxo-pager>
+    <dxo-filter-row
+      [visible]="true"
+      [showOperationChooser]="true"
+      [applyFilter]="'auto'"
+      >></dxo-filter-row
+    >
+    <dxo-header-filter [visible]="false"></dxo-header-filter>
+
+    <dxi-column dataField="Phòng" dataType="string"></dxi-column>
+    <dxi-column dataField="Số người ở" dataType="string"></dxi-column>
+    <dxi-column dataField="Trạng thái" dataType="string"></dxi-column>
+    <dxi-column
+      dataField="Hành động"
+      dataType="string"
+      [width]="150"
+    ></dxi-column>
+  </dx-data-grid>
+</div>

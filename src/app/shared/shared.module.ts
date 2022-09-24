@@ -11,6 +11,7 @@ import {
 import {
   DxButtonModule,
   DxContextMenuModule,
+  DxDataGridModule,
   DxDrawerModule,
   DxListModule,
   DxLoadPanelModule,
@@ -35,6 +36,7 @@ export const DEV_EXTREME_MODULES = [
   DxContextMenuModule,
   DxPopupModule,
   DxPopoverModule,
+  DxDataGridModule,
 ];
 
 export const COMPONENTS = [

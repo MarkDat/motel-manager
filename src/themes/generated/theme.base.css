@@ -10920,7 +10920,7 @@
   border-radius: 4px;
 }
 .dx-menu .dx-menu-item .dx-menu-item-content {
-  padding: 12px 16px;
+  padding: 5px 5px !important;
 }
 .dx-menu .dx-menu-item .dx-menu-item-content .dx-menu-item-popout-container {
   width: 0;
@@ -14749,6 +14749,7 @@
 .dx-datagrid-filter-row .dx-editor-cell .dx-editor-with-menu .dx-placeholder::before,
 .dx-datagrid-filter-row .dx-editor-cell .dx-editor-with-menu .dx-texteditor-input {
   padding-left: 32px;
+  height: 33px;
 }
 .dx-datagrid-filter-row .dx-cell-modified::after,
 .dx-datagrid-filter-row .dx-datagrid-invalid::after {
@@ -15442,7 +15443,7 @@
 }
 .dx-datagrid .dx-editor-with-menu,
 .dx-datagrid-container .dx-editor-with-menu {
-  height: 48px;
+  height: 33px !important;
 }
 .dx-datagrid .dx-editor-with-menu .dx-menu-item-content .dx-icon,
 .dx-datagrid-container .dx-editor-with-menu .dx-menu-item-content .dx-icon {
@@ -15697,8 +15698,8 @@
   line-height: 20px;
 }
 .dx-datagrid .dx-datagrid-table .dx-header-row > td {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
 .dx-datagrid .dx-datagrid-content .dx-datagrid-table .dx-row > td.dx-cell-modified:not(.dx-field-item-content):not(.dx-validation-pending),
 .dx-datagrid .dx-datagrid-content .dx-datagrid-table .dx-row > td.dx-datagrid-invalid:not(.dx-field-item-content):not(.dx-validation-pending):not(.dx-datagrid-select-all),
