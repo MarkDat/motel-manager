@@ -14,6 +14,12 @@ const routes: Routes = [
 				data: {},
 				canActivate: [AuthGuard],
 				loadChildren: () => import('@app/modules/dashboard/dasboard.module').then(m => m.DasboardModule)
+			},
+			{
+				path: 'rooms',
+				data: {},
+				canActivate: [AuthGuard],
+				loadChildren: () => import('@app/modules/rooms/rooms.module').then(m => m.RoomsModule)
 			}
 		],
 	}

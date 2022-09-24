@@ -1,13 +1,13 @@
 export const navigation = [
   {
     text: 'Thống kê',
-    path: '/dashboard',
     icon: 'fa-solid fa-arrow-trend-up',
+    path: '/dashboard',
   },
   {
     text: 'Danh sách phòng',
     icon: 'fa-solid fa-table-list',
-    path: ''
+    path: '/rooms',
   },
   {
     text: 'Cài đặt chung',
