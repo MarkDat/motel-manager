@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ALLOWED_PAGE_SIZES, PAGE_SIZE_DEFAULT } from '@app/constant';
 
 @Component({
@@ -10,7 +11,11 @@ export class RoomGridComponent implements OnInit {
   pageSize: number = PAGE_SIZE_DEFAULT;
   allowPageSizes: any = ALLOWED_PAGE_SIZES;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  redirectRoomDetail() {
+    this.router.navigate(['/rooms/123']);
+  }
 }
