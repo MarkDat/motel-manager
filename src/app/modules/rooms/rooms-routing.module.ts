@@ -1,14 +1,29 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "@app/guard";
+import { RoomDetailComponent } from "./room-detail/room-detail.component";
 import { RoomListComponent } from "./room-list/room-list.component";
+import { RoomsComponent } from "./rooms.component";
 
 const routes: Routes = [
 	{
         path: '',
-        component: RoomListComponent,
+        component: RoomsComponent,
         canActivate: [AuthGuard],
-        children: [],
+        children: [
+            {path: '', redirectTo: 'list', pathMatch: 'full'},
+			{
+				path: 'list',
+				data: {},
+				canActivate: [AuthGuard],
+                component: RoomListComponent,
+			},
+            {
+				path: ':roomNo',
+                canActivate: [AuthGuard],
+				component: RoomDetailComponent,
+			},
+        ],
     },
 ];
 
