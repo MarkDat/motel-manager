@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 
 const routes: Routes = [
-	{path: '', loadChildren: () => import('./modules/client/client.module').then(m => m.ClientModule)}
+	// {path: 'client', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)},
+	{path: 'admin', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)},
 ];
 
 const config: ExtraOptions = {

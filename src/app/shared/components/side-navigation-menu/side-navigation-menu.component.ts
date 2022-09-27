@@ -1,6 +1,6 @@
 import { Component, NgModule, Output, Input, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { navigation } from 'app/app-navigation';
+import { adminNavigation, clientNavigation } from 'app/app-navigation';
 import { DxTreeViewComponent } from 'devextreme-angular';
 
 import * as events from 'devextreme/events';
@@ -32,11 +32,19 @@ export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy{
     this.menu.instance.selectItem(value);
   }
 
+  get isAdmin(): boolean {
+    return true;
+  }
+
+  get navigate(): any{
+    return this.isAdmin ? adminNavigation : clientNavigation;
+  }
+
   private _items;
   get items() {
   
     if (!this._items) {
-      this._items = navigation.map((item) => {
+      this._items = this.navigate.map((item) => {
         if(item.path && !(/^\//.test(item.path))){ 
           item.path = `/${item.path}`;
         }
@@ -106,7 +114,7 @@ export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy{
 
   setItemNavCurrent() {
     if(!this.selectedItem) { 
-      const itemNav = navigation.find(_ => this.router.url.startsWith(_.path));
+      const itemNav = this.navigate.find(_ => this.router.url.startsWith(_.path));
       this.selectedItem = itemNav?.path || '#';
     }
   }
