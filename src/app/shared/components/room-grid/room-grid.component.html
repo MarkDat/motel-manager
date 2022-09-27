@@ -1,6 +1,7 @@
 <div class="room-grid">
   <dx-data-grid
 	[dataSource]="[{
+    id: 1,
 		roomName: 'Phòng 1',
 		peopleNumber: '2',
 		status: 'Đang cho thuê'
@@ -33,7 +34,7 @@
     <dxi-column caption="Trạng thái" dataField="status" dataType="string"></dxi-column>
 	<dxi-column alignment="center" caption="Hành động" cellTemplate="actionRoom">
 		<div class="d-flex" *dxTemplate="let cellData of 'actionRoom'">
-			<i class="dx-icon-rename mr-2" (click)="redirectRoomDetail()"></i>
+			<i class="dx-icon-rename mr-2" (click)="redirectRoomDetail(cellData.data)"></i>
 			<i class="dx-icon-trash"></i>
 		</div>
 	</dxi-column>

@@ -19,7 +19,7 @@ const routes: Routes = [
                 component: RoomListComponent,
 			},
             {
-				path: ':roomNo',
+				path: ':roomNo/edit',
                 canActivate: [AuthGuard],
 				component: RoomDetailComponent,
 			},
