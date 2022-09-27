@@ -34,7 +34,7 @@
     <dxi-column caption="Trạng thái" dataField="status" dataType="string"></dxi-column>
 	<dxi-column alignment="center" caption="Hành động" cellTemplate="actionRoom">
 		<div class="d-flex" *dxTemplate="let cellData of 'actionRoom'">
-			<i class="dx-icon-rename mr-2" (click)="redirectRoomDetail(cellData.data)"></i>
+			<i class="dx-icon-rename mr-2"></i>
 			<i class="dx-icon-trash"></i>
 		</div>
 	</dxi-column>

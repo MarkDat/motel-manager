@@ -7,7 +7,7 @@ export const navigation = [
   {
     text: 'Danh sách phòng',
     icon: 'fa-solid fa-table-list',
-    path: '/rooms',
+    path: '/room',
   },
   {
     text: 'Cài đặt chung',

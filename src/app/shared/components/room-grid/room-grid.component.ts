@@ -14,8 +14,4 @@ export class RoomGridComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-
-  redirectRoomDetail(data) {
-    this.router.navigate(['rooms', data.id, 'edit']);
-  }
 }
