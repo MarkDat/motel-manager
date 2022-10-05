@@ -1,16 +1,12 @@
 <div class="room-grid">
   <dx-data-grid
-	[dataSource]="[{
-    id: 1,
-		roomName: 'Phòng 1',
-		peopleNumber: '2',
-		status: 'Đang cho thuê'
-	}]"
+	[dataSource]="dataSource"
 	[showColumnLines]="true"
 	[wordWrapEnabled]="true"
 	[noDataText]="'Chưa có phòng nào'"
 	[columnAutoWidth]="true"
 	[showBorders]="true"
+  [height]="'100%'"
   >
     <dxo-remote-operations [sorting]="true" [filtering]="true" [paging]="true">
     </dxo-remote-operations>
@@ -32,10 +28,10 @@
     <dxi-column caption="Tên phòng" dataField="roomName" dataType="string"></dxi-column>
     <dxi-column caption="Số người" dataField="peopleNumber" dataType="string"></dxi-column>
     <dxi-column caption="Trạng thái" dataField="status" dataType="string"></dxi-column>
-	<dxi-column alignment="center" caption="Hành động" cellTemplate="actionRoom">
+	<dxi-column cellTemplate="actionRoom" width="85px">
 		<div class="d-flex" *dxTemplate="let cellData of 'actionRoom'">
-			<i class="dx-icon-rename mr-2"></i>
-			<i class="dx-icon-trash"></i>
+			<i class="icon-color--def dx-icon-rename mr-2"></i>
+			<i class="icon-color--red dx-icon-trash"></i>
 		</div>
 	</dxi-column>
   </dx-data-grid>

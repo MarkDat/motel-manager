@@ -32,8 +32,8 @@
             ],
             "styles": [
               "node_modules/devextreme/dist/css/dx.common.css",
-              "src/themes/generated/theme.base.css",
-              "src/themes/generated/theme.additional.css",
+              "src/themes/generated/theme.base.scss",
+              "src/themes/generated/theme.additional.scss",
               "src/dx-styles.scss",
               "src/styles.scss"
             ],

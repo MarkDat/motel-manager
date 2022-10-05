@@ -10,6 +10,262 @@ import { ALLOWED_PAGE_SIZES, PAGE_SIZE_DEFAULT } from '@app/constant';
 export class RoomGridComponent implements OnInit {
   pageSize: number = PAGE_SIZE_DEFAULT;
   allowPageSizes: any = ALLOWED_PAGE_SIZES;
+  dataSource = [{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	},{
+    id: 1,
+		roomName: 'Phòng 1',
+		peopleNumber: '2',
+		status: 'Đang cho thuê'
+	}];
 
   constructor(private router: Router) {}
 

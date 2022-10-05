@@ -8,7 +8,7 @@ const routes: Routes = [
 		path: '',
 		component: AdminComponent,
 		children: [
-			{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+			{path: '', redirectTo: 'room', pathMatch: 'full'},
 			{
 				path: 'dashboard',
 				data: {},
