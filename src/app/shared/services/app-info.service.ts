@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 	providedIn: 'root',
 })
 export class AppInfoService {
-	titlePageBehavior = new BehaviorSubject<string>('');
+	pageTitleBehavior = new BehaviorSubject<string>('');
 
 	constructor() { }
 

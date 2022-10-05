@@ -1,5 +1,7 @@
 import { Component, NgModule, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RoutesRecognized } from '@angular/router';
+import { AppInfoService } from '@app/shared/services/app-info.service';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -33,10 +35,20 @@ export class HeaderComponent implements OnInit {
     }
   }];
 
-  constructor(private router: Router) { }
+  pageTitle: string = '';
+
+  constructor(private router: Router, private appInfo: AppInfoService) {
+  }
 
   ngOnInit() {
     //this.authService.getUser().then((e) => this.user = e.data);
+    this.getPageTitle();
+  }
+  
+  getPageTitle() {
+	this.appInfo.pageTitleBehavior.subscribe(pageTitle => {
+		this.pageTitle = pageTitle;
+	});
   }
 
   toggleMenu = () => {
