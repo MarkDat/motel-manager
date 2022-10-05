@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class AppInfoService {
+	titlePageBehavior = new BehaviorSubject<string>('');
+
 	constructor() { }
 
 	public get title() {

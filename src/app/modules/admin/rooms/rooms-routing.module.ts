@@ -13,7 +13,9 @@ const routes: Routes = [
             {path: '', redirectTo: 'list', pathMatch: 'full'},
 			{
 				path: 'list',
-				data: {},
+				data: {
+                    title: 'Danh sách phòng trọ'
+                },
 				canActivate: [AuthGuard],
                 component: RoomListComponent,
 			},
