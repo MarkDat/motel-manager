@@ -30,7 +30,7 @@
     <dxi-column caption="Trạng thái" dataField="status" dataType="string"></dxi-column>
 	<dxi-column cellTemplate="actionRoom" width="85px">
 		<div class="d-flex" *dxTemplate="let cellData of 'actionRoom'">
-			<i class="icon-color--def dx-icon-rename mr-2"></i>
+			<i class="icon-color--def dx-icon-rename mr-2" (click)="goToDetails(cellData.data)"></i>
 			<i class="icon-color--red dx-icon-trash"></i>
 		</div>
 	</dxi-column>

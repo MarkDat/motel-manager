@@ -3,6 +3,7 @@ import { RoomsComponent } from './rooms.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { RoomListComponent } from './room-list/room-list.component';
 import { RoomsRoutingModule } from './rooms-routing.module';
+import { RoomDetailsComponent } from './room-details/room-details.component';
 
 
 
@@ -10,6 +11,7 @@ import { RoomsRoutingModule } from './rooms-routing.module';
   declarations: [
     RoomsComponent,
     RoomListComponent,
+    RoomDetailsComponent,
   ],
   imports: [
     SharedModule,
