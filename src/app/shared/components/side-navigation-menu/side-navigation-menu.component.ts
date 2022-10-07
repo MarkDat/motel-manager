@@ -66,11 +66,14 @@ export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy{
     if (!this.menu.instance) {
       return;
     }
-
+    
     if (val) {
       this.menu.instance.collapseAll();
     } else {
-      this.menu.instance.expandItem(this._selectedItem);
+      const isHaveItems = this.items.some(item => item.path === this._selectedItem && !!item.items);      
+      if(isHaveItems) {
+         this.menu.instance.expandItem(this._selectedItem);
+      }
     }
   }
 

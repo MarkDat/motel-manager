@@ -3580,7 +3580,7 @@
 .dx-scrollable-scroll-content {
   width: 100%;
   height: 100%;
-  background-color: rgba(191,191,191,.7);
+  background-color: $base-accent;
   -webkit-box-shadow: 0 0 0 1px transparent;
   box-shadow: 0 0 0 1px transparent;
 }
@@ -3591,7 +3591,7 @@
   opacity: 1;
 }
 .dx-scrollbar-hoverable .dx-scrollable-scroll.dx-state-invisible .dx-scrollable-scroll-content {
-  background-color: rgba(0,0,0,0);
+  background-color: $base-accent;
   -webkit-box-shadow: 0 0 0 1px transparent;
   box-shadow: 0 0 0 1px transparent;
 }

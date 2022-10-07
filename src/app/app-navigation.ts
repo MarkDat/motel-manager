@@ -8,6 +8,18 @@ export const adminNavigation = [
     text: 'Danh sách phòng',
     icon: 'fa-solid fa-table-list',
     path: 'admin/room',
+    items: [
+      {text: 'Danh sách phòng',
+      icon: 'fa-solid fa-table-list', path: ''},
+      {text: 'Danh sách phòng',
+      icon: 'fa-solid fa-table-list', path: ''},
+      {text: 'Danh sách phòng',
+      icon: 'fa-solid fa-table-list', path: ''},
+      {text: 'Danh sách phòng',
+      icon: 'fa-solid fa-table-list', path: ''},
+      {text: 'Danh sách phòng',
+      icon: 'fa-solid fa-table-list', path: ''},
+    ],
   },
   {
     text: 'Cài đặt chung',
