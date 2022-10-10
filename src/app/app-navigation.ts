@@ -2,24 +2,12 @@ export const adminNavigation = [
   {
     text: 'Thống kê',
     icon: 'fa-solid fa-arrow-trend-up',
-    path: 'admin/dashboard',
+    path: '/admin/dashboard',
   },
   {
     text: 'Danh sách phòng',
     icon: 'fa-solid fa-table-list',
-    path: 'admin/room',
-    items: [
-      {text: 'Danh sách phòng',
-      icon: 'fa-solid fa-table-list', path: ''},
-      {text: 'Danh sách phòng',
-      icon: 'fa-solid fa-table-list', path: ''},
-      {text: 'Danh sách phòng',
-      icon: 'fa-solid fa-table-list', path: ''},
-      {text: 'Danh sách phòng',
-      icon: 'fa-solid fa-table-list', path: ''},
-      {text: 'Danh sách phòng',
-      icon: 'fa-solid fa-table-list', path: ''},
-    ],
+    path: '/admin/room',
   },
   {
     text: 'Cài đặt chung',

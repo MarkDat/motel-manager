@@ -1,5 +1,6 @@
 import { Component, NgModule, Output, Input, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonFunction } from '@app/shared/utilities/common-funtion';
 import { adminNavigation, clientNavigation } from 'app/app-navigation';
 import { DxTreeViewComponent } from 'devextreme-angular';
 
@@ -117,7 +118,10 @@ export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy{
 
   setItemNavCurrent() {
     if(!this.selectedItem) { 
-      const itemNav = this.navigate.find(_ => this.router.url.startsWith(_.path));
+      const itemNav = this.navigate.find(data => {
+        const objNav = CommonFunction.getObjNested(data, 'items', 'path', this.router.url);
+        return !!objNav && objNav.path;
+      });
       this.selectedItem = itemNav?.path || '#';
     }
   }
