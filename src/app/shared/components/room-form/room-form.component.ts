@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-room-form',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomFormComponent implements OnInit {
 
-  constructor() { }
+  isMobile: boolean = false;
+  constructor(private deviceDetectorService: DeviceDetectorService) {
+	this.isMobile = this.deviceDetectorService.isMobile();
+  }
 
   ngOnInit(): void {
   }

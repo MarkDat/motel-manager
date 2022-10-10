@@ -1,0 +1,20 @@
+@import '../../../../themes/generated/theme.base.scss';
+
+.room-form {
+    background-color:white;
+    height: 100%;
+
+    .header-form {
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: $base-accent;
+        }
+    }
+
+    .content-form {
+        &__general {
+            display: flex;
+        }
+    }
+}
