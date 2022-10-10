@@ -32,7 +32,7 @@ export class SideNavOuterToolbarComponent implements OnInit {
 
     this.router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        this.selectedRoute = val.urlAfterRedirects.split('?')[0];
+        this.selectedRoute = val.url.split('?')[0];
       }
     });
 
@@ -66,12 +66,14 @@ export class SideNavOuterToolbarComponent implements OnInit {
     const pointerEvent = event.event;
 
     if (path) {
-      if (event.node.selected) {
-        pointerEvent.preventDefault();
-      } else {
-        this.router.navigate([path]);
-        this.scrollView.instance.scrollTo(0);
-      }
+      // if (event.node.selected) {
+      //   pointerEvent.preventDefault();
+      // } else {
+      //   this.router.navigate([path]);
+      //   this.scrollView.instance.scrollTo(0);
+      // }
+      this.router.navigate([path]);
+      this.scrollView.instance.scrollTo(0);
 
       if (this.hideMenuAfterNavigation) {
         this.temporaryMenuOpened = false;

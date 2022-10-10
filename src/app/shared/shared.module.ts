@@ -11,6 +11,7 @@ import {
 import {
   DxButtonModule,
   DxContextMenuModule,
+  DxDataGridModule,
   DxDrawerModule,
   DxListModule,
   DxLoadPanelModule,
@@ -21,6 +22,7 @@ import {
   DxTreeViewModule,
 } from 'devextreme-angular';
 import { TruncatePipe, MoneyStringPipe } from '@app/pipe';
+import { RoomFormComponent } from './components/room-form/room-form.component';
 
 export const COMMON_MODULES = [CommonModule, RouterModule];
 
@@ -35,6 +37,7 @@ export const DEV_EXTREME_MODULES = [
   DxContextMenuModule,
   DxPopupModule,
   DxPopoverModule,
+  DxDataGridModule,
 ];
 
 export const COMPONENTS = [
@@ -43,6 +46,7 @@ export const COMPONENTS = [
   HeaderComponent,
   UserPanelComponent,
   RoomGridComponent,
+  RoomFormComponent,
 ];
 
 export const PIPES = [TruncatePipe, MoneyStringPipe];

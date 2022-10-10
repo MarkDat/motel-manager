@@ -1,18 +1,25 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule, ExtraOptions} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 const routes: Routes = [
-	{path: '', loadChildren: () => import('./modules/client/client.module').then(m => m.ClientModule)}
+  // {path: 'client', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)},
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./modules/admin/admin.module').then((m) => m.AdminModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'admin',
+  },
 ];
 
 const config: ExtraOptions = {
-	useHash: false
+  useHash: false,
 };
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, config)],
-	exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, config)],
+  exports: [RouterModule],
 })
-
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

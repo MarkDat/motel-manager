@@ -11,11 +11,14 @@
 	</div> -->
 </div>
 
-<dx-popover target="#u-info" position="bottom" [width]="150" [(visible)]="optionVisible">
+<dx-popover target="#u-info" position="bottom" [width]="150" [(visible)]="optionVisible" [closeOnOutsideClick]="true">
 	<div *dxTemplate="let data = model; of: 'content'">
 		<div class="options-container">
 			<div class="options-container__action">
-				<a href="#" target="_blank" class="options-item"><span>Đăng xuất</span></a>
+				<a href="#" target="_blank" class="options-item">
+					<i class="c-black fa-solid fa-person-running mr-2"></i>
+					<span>Đăng xuất</span>
+				</a>
 			</div>
 		</div>
 	</div>

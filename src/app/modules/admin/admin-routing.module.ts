@@ -1,25 +1,25 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "@app/guard";
-import { ClientComponent } from "./client.component";
+import { AdminComponent } from "./admin.component";
 
 const routes: Routes = [
 	{
 		path: '',
-		component: ClientComponent,
+		component: AdminComponent,
 		children: [
-			{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+			{path: '', redirectTo: 'room', pathMatch: 'full'},
 			{
 				path: 'dashboard',
 				data: {},
 				canActivate: [AuthGuard],
-				loadChildren: () => import('@app/modules/dashboard/dasboard.module').then(m => m.DasboardModule)
+				loadChildren: () => import('@app/modules/admin/dashboard/dasboard.module').then(m => m.DasboardModule)
 			},
 			{
-				path: 'rooms',
+				path: 'room',
 				data: {},
 				canActivate: [AuthGuard],
-				loadChildren: () => import('@app/modules/rooms/rooms.module').then(m => m.RoomsModule)
+				loadChildren: () => import('@app/modules/admin/rooms/rooms.module').then(m => m.RoomsModule)
 			}
 		],
 	}
@@ -30,6 +30,6 @@ const routes: Routes = [
 	exports: [RouterModule]
 })
 
-export class ClientRoutingModule {
+export class AdminRoutingModule {
 }
 

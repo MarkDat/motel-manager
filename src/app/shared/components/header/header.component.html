@@ -6,6 +6,11 @@
           onClick: toggleMenu
         }">
 		</dxi-item>
+		<dxi-item location="before" locateInMenu="never">
+			<div *dxTemplate>
+			  <div class="page-title">{{pageTitle}}</div>
+			</div>
+		</dxi-item>
 		<dxi-item location="after">
 			<app-user-panel [user]="user" [menuItems]="userMenuItems" menuMode="list"></app-user-panel>
 		</dxi-item>
