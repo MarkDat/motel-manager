@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AuthGuard, TitleGuard } from "@app/guard";
+import { AuthGuard } from "@app/guard";
 import { RoomListComponent } from "./room-list/room-list.component";
 import { RoomsComponent } from "./rooms.component";
 import { RoomDetailsComponent } from "./room-details/room-details.component";
@@ -17,7 +17,7 @@ const routes: Routes = [
                 data: {
                     pageTitle: 'Danh sách phòng trọ'
                 },
-                canActivate: [AuthGuard, TitleGuard],
+                canActivate: [AuthGuard],
                 component: RoomListComponent,
             },
             {
@@ -25,7 +25,7 @@ const routes: Routes = [
                 data: {
                     pageTitle: 'Phòng'
                 },
-                canActivate: [AuthGuard, TitleGuard],
+                canActivate: [AuthGuard],
                 component: RoomDetailsComponent,
             }
         ],
