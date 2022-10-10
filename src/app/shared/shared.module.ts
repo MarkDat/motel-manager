@@ -22,6 +22,7 @@ import {
   DxTreeViewModule,
 } from 'devextreme-angular';
 import { TruncatePipe, MoneyStringPipe } from '@app/pipe';
+import { RoomFormComponent } from './components/room-form/room-form.component';
 
 export const COMMON_MODULES = [CommonModule, RouterModule];
 
@@ -45,6 +46,7 @@ export const COMPONENTS = [
   HeaderComponent,
   UserPanelComponent,
   RoomGridComponent,
+  RoomFormComponent,
 ];
 
 export const PIPES = [TruncatePipe, MoneyStringPipe];
