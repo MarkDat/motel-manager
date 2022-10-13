@@ -26,4 +26,21 @@ export class CommonFunction {
 		
 		return null;
 	}
+	
+	public static IsKeyCodeMatch(keyEvent, keyNum, keyCode) {
+		let code;
+		if (keyEvent.key !== undefined) {
+			code = keyEvent.key;
+		} else if (keyEvent.event.key !== undefined) {
+			code = keyEvent.event.key;
+		} else if (keyEvent.keyIdentifier !== undefined) {
+			code = keyEvent.keyIdentifier;
+		} else if (keyEvent.keyCode !== undefined) {
+			code = keyEvent.keyCode;
+		} else if (keyEvent.event.keyCode !== undefined) {
+			code = keyEvent.event.keyCode;
+		}
+
+		return code === keyCode || code === keyNum;
+	}
 }

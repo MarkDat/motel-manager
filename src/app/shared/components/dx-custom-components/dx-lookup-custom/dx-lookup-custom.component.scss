@@ -1,0 +1,89 @@
+@import "../../../../../themes/generated/variables.base.scss";
+
+::ng-deep {
+	.placeholder-lookup {
+		display: table !important;
+		color: #00a998;
+		font-size: 12px;
+		z-index: 1000;
+		position: absolute;
+	}
+
+	dx-lookup {
+		.dx-lookup-field-wrapper {
+			.custom-lookup-field-template{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+
+				dx-text-box {
+					&.inline-control {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.dx-popup-normal, .dx-popup-fullscreen {
+		.lookup-add-item-wrap {
+			padding-bottom: 14px;
+			border-bottom: 1px solid #d3d3d3;
+
+			.lookup-add-item {
+				cursor: pointer;
+				height: 37px;
+				display: flex;
+				align-items: center;
+				padding: 0 20px;
+				color: $base-accent;
+				font-size: 13px;
+
+				:hover, :focus {
+					color: $base-accent !important;
+				}
+
+				img {
+					padding-right: 10px;
+				}
+				span {
+					padding-top: 3px;
+				}
+			}
+
+			:hover {
+				color: $base-accent !important;
+			}
+		}
+	}
+
+	.dx-popup-wrapper {
+		&.addItemPopup {
+			.dx-popup-content {
+				height: calc(100% - 100px) !important;
+				padding: unset;
+			}
+
+			.add-item-content {
+				padding: 20px;
+			}
+
+			.add-item-action {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				left: 0px;
+				display: flex;
+				justify-content: flex-end;
+				padding: 0 20px 20px;
+
+
+				.dx-button:first-child {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+}

@@ -3,7 +3,8 @@
      <div class="room-general__content">
           <div class="row">
                <div class="col-6">
-                    <dx-text-box class="inline-control" [value]="'Phòng 1'" placeholder="Tên phòng"></dx-text-box>
+                    <dx-text-box class="inline-control" [value]="'Phòng 1'" placeholder="Tên phòng">
+                    </dx-text-box>
                </div>
                <div class="col-6">
                     <dx-date-box class="inline-control" placeholder="Ngày nhập phòng" [readOnly]="false"
@@ -12,7 +13,7 @@
           </div>
           <div class="row mt-3">
                <div class="col-6">
-                    <dx-lookup class="inline-control" [dataSource]="statusSource" placeholder="Trạng thái" [valueExpr]="'statusNo'"  [displayExpr]="'statusName'"></dx-lookup>
+                   <app-dx-lookup-custom placeholder="Trạng thái" [dataSource]="statusSource" [valueExpr]="'statusNo'" [displayExpr]="'statusName'" [showTitle]="false"></app-dx-lookup-custom>
                </div>
                <div class="col-6">
                     <dx-date-box class="inline-control" placeholder="Ngày gia hạn" [readOnly]="false"

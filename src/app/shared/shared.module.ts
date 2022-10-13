@@ -8,6 +8,7 @@ import {
   UserPanelComponent,
   RoomGridComponent,
   RoomGeneralComponent,
+  DxLookupCustomComponent,
 } from '@app/shared/components';
 import {
   DxButtonModule,
@@ -25,8 +26,9 @@ import {
   DxTextBoxModule,
   DxToolbarModule,
   DxTreeViewModule,
+  DxValidatorModule,
 } from 'devextreme-angular';
-import { TruncatePipe, MoneyStringPipe } from '@app/pipe';
+import { TruncatePipe, MoneyStringPipe, CapitalizeFirstLetterPipe } from '@app/pipe';
 import { RoomFormComponent } from './components/room-form/room-form.component';
 
 export const COMMON_MODULES = [CommonModule, RouterModule];
@@ -47,6 +49,7 @@ export const DEV_EXTREME_MODULES = [
   DxTextBoxModule,
   DxDateBoxModule,
   DxLookupModule,
+  DxValidatorModule,
 ];
 
 export const COMPONENTS = [
@@ -57,9 +60,10 @@ export const COMPONENTS = [
   RoomGridComponent,
   RoomFormComponent,
   RoomGeneralComponent,
+  DxLookupCustomComponent,
 ];
 
-export const PIPES = [TruncatePipe, MoneyStringPipe];
+export const PIPES = [TruncatePipe, MoneyStringPipe, CapitalizeFirstLetterPipe];
 
 @NgModule({
   declarations: [...COMPONENTS, ...PIPES],
