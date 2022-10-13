@@ -10059,7 +10059,7 @@
   text-align: center;
 }
 .dx-datebox-calendar .dx-dropdowneditor-icon::before {
-  content: "\f001";
+  content: "";
   position: absolute;
   display: block;
   width: 24px;
@@ -10068,6 +10068,19 @@
   left: 50%;
   margin-left: -12px;
 }
+
+.dx-datebox-calendar.dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 24px;
+  top: 50%;
+  margin-top: -12px;
+  left: 50%;
+  margin-left: -12px;
+  color: $base-accent;
+}
+
 .dx-datebox-calendar.dx-dropdowneditor-active.dx-editor-filled {
   // background: rgba(0,0,0,.07);
 }
