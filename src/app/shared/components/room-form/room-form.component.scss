@@ -1,16 +1,8 @@
-@import '../../../../themes/generated/theme.base.scss';
-
 .room-form {
-    background-color:white;
-    height: 100%;
-
-    .header-form {
-        .title {
-            text-align: center;
-            font-size: 24px;
-            color: $base-accent;
-        }
-    }
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    background-color: whitesmoke;
 
     .content-form {
         &__general {

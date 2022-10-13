@@ -1,3 +1,14 @@
+@import '../../../../../themes/generated/variables.base.scss';
+
 .room-detals {
     height: 100%;
+    background-color:white;
+
+    .header-form {
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: $base-accent;
+        }
+    }
 }

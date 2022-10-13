@@ -4,3 +4,4 @@ export * from './header/header.component';
 export * from './user-panel/user-panel.component';
 export * from './room-grid/room-grid.component';
 export * from './room-form/room-form.component';
+export * from './room-general/room-general.component';

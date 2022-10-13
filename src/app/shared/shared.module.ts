@@ -7,6 +7,7 @@ import {
   HeaderComponent,
   UserPanelComponent,
   RoomGridComponent,
+  RoomGeneralComponent,
 } from '@app/shared/components';
 import {
   DxButtonModule,
@@ -47,6 +48,7 @@ export const COMPONENTS = [
   UserPanelComponent,
   RoomGridComponent,
   RoomFormComponent,
+  RoomGeneralComponent,
 ];
 
 export const PIPES = [TruncatePipe, MoneyStringPipe];
