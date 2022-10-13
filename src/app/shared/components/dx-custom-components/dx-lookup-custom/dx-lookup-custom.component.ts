@@ -25,7 +25,7 @@ export class DxLookupCustomComponent implements OnInit {
 	@Input() isDisabled = false;
 	@Input() isSearch = true;
 	@Input() isAddedMoreItem = false;
-	@Input() isInlineControl = true;
+	@Input() isInlineControl = false;
 	@Input() removeBorderBottom = false;
 	@Input() isAcceptZeroValue = false;
 	@Input() popupWidth = 'auto';
