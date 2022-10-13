@@ -10,6 +10,18 @@ export class RoomGeneralComponent implements OnInit {
 
   now = new Date();
   displayFormatDatetime = DISPLAY_FORMAT_DATETIME;
+
+  statusSource = [
+    {
+      statusNo: 1,
+      statusName: 'Đang thuê',
+    },
+    {
+      statusNo: 2,
+      statusName: 'Còn trông',
+    }
+  ];
+  
   constructor() { }
 
   ngOnInit(): void {
