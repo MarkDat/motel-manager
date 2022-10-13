@@ -1,6 +1,11 @@
 <div class="room-general">
     <div class="room-general__title">Thông tin chung </div>
-    <div class="room-general__content">
-        <dx-number-box class="inline-control" placeholder="Bond Number"></dx-number-box>
+    <div class="room-general__content row">
+       <div class="col-6">
+            <dx-text-box class="inline-control" [value]="'Phòng 1'" placeholder="Tên phòng"></dx-text-box>
+       </div>
+       <div class="col-6">
+            <dx-date-box class="inline-control" placeholder="Ngày nhập phòng" [readOnly]="false" [displayFormat]="displayFormatDatetime" [value]="now" type="date"></dx-date-box>
+       </div>
     </div>
 </div>

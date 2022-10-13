@@ -5061,12 +5061,12 @@
 .dx-texteditor.dx-editor-filled.dx-state-disabled,
 .dx-texteditor.dx-editor-filled.dx-state-readonly,
 .dx-texteditor.dx-editor-filled.dx-state-readonly.dx-state-hover {
-  background-color: rgba(0,0,0,.12);
+  // background-color: rgba(0,0,0,.12);
 }
 .dx-texteditor.dx-editor-filled.dx-state-disabled .dx-texteditor-input,
 .dx-texteditor.dx-editor-filled.dx-state-readonly .dx-texteditor-input,
 .dx-texteditor.dx-editor-filled.dx-state-readonly.dx-state-hover .dx-texteditor-input {
-  color: rgba(0,0,0,.5);
+  color: rgba(0,0,0,.87);
 }
 .dx-texteditor.dx-editor-underlined {
   background-color: transparent;
@@ -10069,7 +10069,7 @@
   margin-left: -12px;
 }
 .dx-datebox-calendar.dx-dropdowneditor-active.dx-editor-filled {
-  background: rgba(0,0,0,.07);
+  // background: rgba(0,0,0,.07);
 }
 .dx-datebox-calendar.dx-rtl.dx-dropdowneditor-active .dx-dropdowneditor-button .dx-dropdowneditor-icon {
   opacity: 1;

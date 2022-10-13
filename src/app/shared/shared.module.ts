@@ -13,6 +13,7 @@ import {
   DxButtonModule,
   DxContextMenuModule,
   DxDataGridModule,
+  DxDateBoxModule,
   DxDrawerModule,
   DxListModule,
   DxLoadPanelModule,
@@ -20,6 +21,7 @@ import {
   DxPopoverModule,
   DxPopupModule,
   DxScrollViewModule,
+  DxTextBoxModule,
   DxToolbarModule,
   DxTreeViewModule,
 } from 'devextreme-angular';
@@ -41,6 +43,8 @@ export const DEV_EXTREME_MODULES = [
   DxPopoverModule,
   DxDataGridModule,
   DxNumberBoxModule,
+  DxTextBoxModule,
+  DxDateBoxModule,
 ];
 
 export const COMPONENTS = [
