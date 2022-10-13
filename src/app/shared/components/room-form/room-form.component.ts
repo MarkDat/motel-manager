@@ -10,7 +10,7 @@ export class RoomFormComponent implements OnInit {
 
   isMobile: boolean = false;
   constructor(private deviceDetectorService: DeviceDetectorService) {
-	this.isMobile = this.deviceDetectorService.isMobile();
+    this.isMobile = this.deviceDetectorService.isMobile();
   }
 
   ngOnInit(): void {
