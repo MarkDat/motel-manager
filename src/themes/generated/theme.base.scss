@@ -4788,7 +4788,7 @@
   cursor: text;
   pointer-events: none;
   color: rgba(148,148,148,.87);
-  font-size: 16px;
+  font-size: 12px;
 }
 .dx-placeholder::before {
   display: inline-block;
@@ -4862,7 +4862,7 @@
   margin: 0;
   background-color: transparent;
   color: rgba(0,0,0,.87);
-  font-size: 16px;
+  font-size: 14px;
 }
 .dx-texteditor-input:-webkit-autofill + .dx-placeholder {
   display: none!important;
@@ -4946,7 +4946,7 @@
 }
 .dx-texteditor.dx-state-active,
 .dx-texteditor.dx-state-focused {
-  background-color: rgba(0,0,0,.04);
+  // background-color: rgba(0,0,0,.04);
 }
 .dx-texteditor.dx-state-active::before,
 .dx-texteditor.dx-state-focused::before {
@@ -5044,16 +5044,16 @@
 .dx-texteditor.dx-editor-filled .dx-texteditor-input,
 .dx-texteditor.dx-editor-outlined .dx-placeholder::before,
 .dx-texteditor.dx-editor-outlined .dx-texteditor-input {
-  padding: 15px 16px 14px;
+  padding: 20px 0px 4px;
 }
 .dx-texteditor.dx-editor-filled {
-  background-color: rgba(0,0,0,.04);
+  // background-color: rgba(0,0,0,.04);
 }
 .dx-texteditor.dx-editor-filled::after {
   border-bottom: 1px solid rgba(0,0,0,.42);
 }
 .dx-texteditor.dx-editor-filled.dx-state-hover {
-  background-color: rgba(0,0,0,.07);
+  // background-color: rgba(0,0,0,.07);
 }
 .dx-texteditor.dx-editor-filled.dx-state-hover::after {
   border-bottom-color: rgba(0,0,0,.87);

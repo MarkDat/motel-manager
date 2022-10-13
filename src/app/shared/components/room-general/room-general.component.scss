@@ -1,0 +1,9 @@
+@import '../../../../themes/generated/theme.base.scss';
+
+.room-general {
+    &__title {
+        color: $base-accent;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}

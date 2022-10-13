@@ -35,7 +35,8 @@
               "src/themes/generated/theme.base.scss",
               "src/themes/generated/theme.additional.scss",
               "src/dx-styles.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/themes/devextreme/devextreme-override.scss"
             ],
             "scripts": []
           },
