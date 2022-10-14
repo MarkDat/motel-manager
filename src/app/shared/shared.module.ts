@@ -23,6 +23,7 @@ import {
   DxPopoverModule,
   DxPopupModule,
   DxScrollViewModule,
+  DxSelectBoxModule,
   DxTextBoxModule,
   DxToolbarModule,
   DxTreeViewModule,
@@ -50,6 +51,7 @@ export const DEV_EXTREME_MODULES = [
   DxDateBoxModule,
   DxLookupModule,
   DxValidatorModule,
+  DxSelectBoxModule,
 ];
 
 export const COMPONENTS = [

@@ -28,7 +28,7 @@
 			(onSelectionChanged)="onSelectionChanged.emit($event)"
 			(onContentReady)="onContentReady($event)"
 			itemTemplate="lookupItem"
-			[dropDownOptions]="{container: lookupDiv}">
+			[dropDownOptions]="{container: lookupDiv, target: lookupDiv}">
 		<div *dxTemplate="let item of 'lookupItem';">
 			<div *ngIf="!customItemTemplate" [title]="item[displayExpr]"
 				style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis">

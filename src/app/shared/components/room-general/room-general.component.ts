@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DISPLAY_FORMAT_DATETIME } from '@app/constant';
+import { CommonFunction } from '@app/shared/utilities/common-funtion';
 
 @Component({
   selector: 'app-room-general',
@@ -18,7 +19,7 @@ export class RoomGeneralComponent implements OnInit {
     },
     {
       statusNo: 2,
-      statusName: 'Còn trông',
+      statusName: 'Còn trổng',
     }
   ];
   
@@ -27,4 +28,13 @@ export class RoomGeneralComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDateBoxFormat(ev: any) { console.log(ev);
+  
+		CommonFunction.formatDateBox(ev);
+	}
+
+  test(e) {
+    console.log('focus out');
+    
+  }
 }

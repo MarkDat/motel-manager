@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { locale, loadMessages, formatMessage } from 'devextreme/localization';
 import * as viMessages from 'devextreme/localization/messages/vi.json';
+import dxDateBox from 'devextreme/ui/date_box';
 import { AppInfoService } from './shared/services/app-info.service';
+import { CommonFunction } from './shared/utilities/common-funtion';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,7 @@ export class AppComponent {
   locale: string = 'en'
 
   constructor(private appService: AppInfoService) {
+    this.initDefaultDateBox();
     this.initMessages();
     locale(this.locale);
   }
@@ -20,5 +23,17 @@ export class AppComponent {
   initMessages() {
     loadMessages(viMessages);
     loadMessages(this.appService.getLocalesDictionary());
+  }
+
+  initDefaultDateBox() {
+    dxDateBox.defaultOptions({
+      options: {
+        onInitialized: (e) => {
+            e.component.dateOption('onFocusOut', (e) => {
+              CommonFunction.formatDateBox(e);
+            });
+        },
+      }
+    });
   }
 }

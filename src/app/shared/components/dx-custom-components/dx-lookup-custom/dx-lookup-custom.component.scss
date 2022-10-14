@@ -1,5 +1,7 @@
 @import "../../../../../themes/generated/variables.base.scss";
-
+.dx-lookup-custom {
+	height: 500px;
+}
 ::ng-deep {
 	.placeholder-lookup {
 		display: table !important;
