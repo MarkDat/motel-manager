@@ -3580,7 +3580,7 @@
 .dx-scrollable-scroll-content {
   width: 100%;
   height: 100%;
-  background-color: $base-accent;
+  background-color: $scrollbar-scroll-content-color;
   -webkit-box-shadow: 0 0 0 1px transparent;
   box-shadow: 0 0 0 1px transparent;
 }
@@ -3591,7 +3591,7 @@
   opacity: 1;
 }
 .dx-scrollbar-hoverable .dx-scrollable-scroll.dx-state-invisible .dx-scrollable-scroll-content {
-  background-color: $base-accent;
+  background-color: $scrollbar-invisible-color;
   -webkit-box-shadow: 0 0 0 1px transparent;
   box-shadow: 0 0 0 1px transparent;
 }
@@ -8410,7 +8410,7 @@
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-focused {
   background-color: rgba(0,0,0,.04);
   color: rgba(0,0,0,.87);
-  border-radius: 8px;
+  border-radius: 0;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-focused.dx-list-item-selected {
   background-color: rgba(0,0,0,.18);
@@ -8477,7 +8477,7 @@
 .dx-list-item.dx-state-hover {
   background-color: rgba(0,0,0,.04);
   color: rgba(0,0,0,.87);
-  border-radius: 8px;
+  // border-radius: 8px;
 }
 .dx-list-item.dx-state-active .dx-list-switchable-delete-button-inner-wrapper,
 .dx-list-item.dx-state-hover .dx-list-switchable-delete-button-inner-wrapper {
@@ -8485,11 +8485,11 @@
 }
 .dx-list-item:first-of-type {
   border-top: none;
-  margin-top: 8px;
+  margin-top: 0;
 }
 .dx-list-item:last-of-type {
   border-bottom: none;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .dx-list-item .dx-icon {
   color: rgba(0,0,0,.54);
@@ -8505,7 +8505,7 @@
 .dx-list .dx-empty-message,
 .dx-list-item {
   color: rgba(0,0,0,.87);
-  margin-top: 5px;
+  margin-top: 0;
 }
 .dx-list-item-separator-hidden .dx-list .dx-empty-message,
 .dx-list-item-separator-hidden .dx-list-item {
@@ -8514,7 +8514,7 @@
 }
 .dx-list-item-content {
   font-size: 14px;
-  padding: 14px 16px 13px;
+  padding: 6px 13px 6px;
 }
 .dx-list .dx-empty-message {
   text-align: left;
@@ -12995,7 +12995,7 @@
 }
 .dx-lookup-search-wrapper {
   width: 100%;
-  padding: 20px 20px 14px;
+  padding: 6px 4px 13px;
 }
 .dx-lookup.dx-editor-filled,
 .dx-lookup.dx-editor-outlined {

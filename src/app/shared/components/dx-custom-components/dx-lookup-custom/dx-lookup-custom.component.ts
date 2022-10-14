@@ -73,7 +73,8 @@ export class DxLookupCustomComponent implements OnInit {
 			content.addClass(this.customSearchBoxClass);
 		}
 		
-		const popupContent = event.component._popup._$popupContent;
+		const popupContent = event.component._popup._$popupContent; console.log(event.component._popup._$popupContent);
+		
 		const addItemWrapEle = popupContent.find('.lookup-add-item-wrap');
 
 		if (addItemWrapEle.length > 0) {
