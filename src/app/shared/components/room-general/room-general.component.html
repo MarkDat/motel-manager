@@ -1,27 +1,37 @@
 <div class="room-general">
-     <div class="room-general__title content-title">Thông tin chung </div>
-     <div class="room-general__content">
-          <div class="row">
+    <div class="room-general__title content-title">Thông tin chung </div>
+    <div class="room-general__content">
+        <div class="row">
+            <div class="col-6">
+                <dx-text-box class="inline-control" [value]="'Phòng 1'" placeholder="Tên phòng">
+                </dx-text-box>
+            </div>
+            <div class="col-6">
+                <dx-date-box class="inline-control" placeholder="Ngày nhập phòng" [readOnly]="false"
+                    [displayFormat]="displayFormatDatetime" [value]="now" type="date">
+                </dx-date-box>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <!-- <app-dx-lookup-custom placeholder="Trạng thái" [dataSource]="statusSource" [valueExpr]="'statusNo'" [displayExpr]="'statusName'" [showTitle]="false"></app-dx-lookup-custom> -->
+                <dx-select-box class="inline-control" placeholder="Trạng thái" [items]="statusSource"
+                    [valueExpr]="'statusNo'" [displayExpr]="'statusName'">
+                </dx-select-box>
+            </div>
+            <div class="col-6 row">
                <div class="col-6">
-                    <dx-text-box class="inline-control" [value]="'Phòng 1'" placeholder="Tên phòng">
-                    </dx-text-box>
+                <dx-date-box class="inline-control" placeholder="Ngày gia hạn" [readOnly]="false"
+                [displayFormat]="displayFormatDatetime" [value]="now" type="date">
+            </dx-date-box>
                </div>
                <div class="col-6">
-                    <dx-date-box class="inline-control" placeholder="Ngày nhập phòng" [readOnly]="false"
-                         [displayFormat]="displayFormatDatetime" [value]="now" type="date"></dx-date-box>
+                <dx-date-box class="inline-control" placeholder="Ngày gia hạn" [readOnly]="false"
+                [displayFormat]="displayFormatDatetime" [value]="now" type="date">
+            </dx-date-box>
                </div>
-          </div>
-          <div class="row mt-3">
-               <div class="col-6">
-                   <!-- <app-dx-lookup-custom placeholder="Trạng thái" [dataSource]="statusSource" [valueExpr]="'statusNo'" [displayExpr]="'statusName'" [showTitle]="false"></app-dx-lookup-custom> -->
-                   <dx-select-box class="inline-control" placeholder="Trạng thái" [items]="statusSource" [valueExpr]="'statusNo'" [displayExpr]="'statusName'"></dx-select-box>
-                   
-               </div>
-               <div class="col-6">
-                    <dx-date-box class="inline-control" placeholder="Ngày gia hạn" [readOnly]="false"
-                         [displayFormat]="displayFormatDatetime" [value]="now" type="date"></dx-date-box>
-               </div>
-          </div>
+            </div>
+        </div>
 
-     </div>
+    </div>
 </div>
