@@ -1,49 +1,53 @@
 <span *ngIf="value || (isAcceptZeroValue && value == 0)" class="placeholder-lookup">
 	{{placeholder}}
 </span>
-<dx-lookup #dxLookup
-		   [class.inline-control]="isInlineControl"
-		   [class.disabled-control]="isDisabled"
-		   [class.remove-border-bottom]="removeBorderBottom"
-		   [(searchEnabled)]="isSearch"
-		   [dataSource]="dataSource"
-		   [showCancelButton]="false"
-		   [placeholder]="placeholder"
-		   [searchPlaceholder]="searchPlaceHolder"
-		   [noDataText]="noLookupData"
-		   [displayExpr]="displayExpr"
-		   [valueExpr]="valueExpr"
-		   [height]="height"
-		   (keydown.tab)="onKeyTabPress($event)"
-		   [disabled]="isDisabled"
-		   width="100%"
-		   [(value)]="value"
-		   (onItemClick)="onItemClick($event)"
-		   (onOpened)="onOpened($event)"
-		   (onClosed)="onClosed($event)"
-		   (focusin)="onFocusIn($event)"
-		   [showClearButton]="isShowClearButton"
-		   (onValueChanged)="onValueChanged($event)"
-		   (onSelectionChanged)="onSelectionChanged.emit($event)"
-		   (onContentReady)="onContentReady($event)"
-		   itemTemplate="lookupItem">
-	<div *dxTemplate="let item of 'lookupItem';">
-		<div *ngIf="!customItemTemplate" [title]="item[displayExpr]"
-			 style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis">
-			{{item[displayExpr]}}
+<div class="dx-lookup-custom" #lookupDiv>
+	<dx-lookup #dxLookup
+			[class.inline-control]="isInlineControl"
+			[class.disabled-control]="isDisabled"
+			[class.remove-border-bottom]="removeBorderBottom"
+			[(searchEnabled)]="isSearch"
+			[dataSource]="dataSource"
+			[showCancelButton]="false"
+			[placeholder]="placeholder"
+			[searchPlaceholder]="searchPlaceHolder"
+			[noDataText]="noLookupData"
+			[displayExpr]="displayExpr"
+			[valueExpr]="valueExpr"
+			[height]="height"
+			(keydown.tab)="onKeyTabPress($event)"
+			[disabled]="isDisabled"
+			width="100%"
+			[(value)]="value"
+			(onItemClick)="onItemClick($event)"
+			(onOpened)="onOpened($event)"
+			(onClosed)="onClosed($event)"
+			(focusin)="onFocusIn($event)"
+			[showClearButton]="isShowClearButton"
+			(onValueChanged)="onValueChanged($event)"
+			(onSelectionChanged)="onSelectionChanged.emit($event)"
+			(onContentReady)="onContentReady($event)"
+			itemTemplate="lookupItem"
+			[dropDownOptions]="{container: lookupDiv}">
+		<div *dxTemplate="let item of 'lookupItem';">
+			<div *ngIf="!customItemTemplate" [title]="item[displayExpr]"
+				style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis">
+				{{item[displayExpr]}}
+			</div>
+			<ng-container *ngIf="!!customItemTemplate" [ngTemplateOutlet]="customItemTemplate"
+						[ngTemplateOutletContext]="{data:item}"></ng-container>
 		</div>
-		<ng-container *ngIf="!!customItemTemplate" [ngTemplateOutlet]="customItemTemplate"
-					  [ngTemplateOutletContext]="{data:item}"></ng-container>
-	</div>
-	<dxo-drop-down-options
-		[closeOnOutsideClick]="closeOnOutsideClick"
-		[showTitle]="showTitle">
-	</dxo-drop-down-options>
-	<dx-validator>
-		<dxi-validation-rule
-			type="custom"
-			[validationCallback]="validationRequiredCallback"
-			[message]="placeholder + ' is required' | capitalizeFirstLetterPipe">
-		</dxi-validation-rule>
-	</dx-validator>
-</dx-lookup>
+		<dxo-drop-down-options
+			[closeOnOutsideClick]="closeOnOutsideClick"
+			[showTitle]="showTitle"
+			position="bottom">
+		</dxo-drop-down-options>
+		<dx-validator>
+			<dxi-validation-rule
+				type="custom"
+				[validationCallback]="validationRequiredCallback"
+				[message]="placeholder + ' is required' | capitalizeFirstLetterPipe">
+			</dxi-validation-rule>
+		</dx-validator>
+	</dx-lookup>
+</div>
