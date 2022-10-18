@@ -1,5 +1,5 @@
 import {Subscription} from 'rxjs';
-import * as moment from 'moment/moment';
+import * as moment from 'moment';
 import { COMPARE_OPERATIONS } from '@app/enum';
 
 export class CommonFunction {
@@ -107,6 +107,10 @@ export class CommonFunction {
 		return outputYear;
 	}
 
+	public static isDDMMYYYY(date: any) {
+		return /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.test(date)
+	}
+
 	public static formatDateBox(ev: any) {
 		if (!ev.event) {
 			return;
@@ -115,7 +119,7 @@ export class CommonFunction {
 		const userInput = ev.event.target.value;
 		let oldValue: null;
 		let newValue: any = null;
-
+		
 		if (moment(userInput, 'DD/MM/YYYY', true).isValid()) {
 			return;
 		}
